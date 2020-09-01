@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Text;
 
+/* 
+No cumple con expert
+Se deberían crear las clases Medico y Paciente para guardar los datos de cada uno fuera de la clase AppointmentService ya que esa responsabilidad les pertenecería a ellos
+
+No cumple con SRP porque tiene más de una posibilidad de cambio
+*/
 namespace Library
 {
     public class AppointmentService
