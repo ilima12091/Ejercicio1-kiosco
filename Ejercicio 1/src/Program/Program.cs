@@ -8,6 +8,7 @@ namespace Expert_SRP
         {
             Alfajor a = new Alfajor(10, 8.5);
             Kiosco k = new Kiosco();
+            // El control de si puede comprar o no debería ser manejado en la clase kiosco directamente
             if (k.PuedeComprar(a, 15, "$"))
             {
                 Console.WriteLine("Felicitaciones! Tiene suficiente dinero para comprar un alfajor :)");
