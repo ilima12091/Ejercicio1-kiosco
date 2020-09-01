@@ -2,7 +2,7 @@
 
 namespace SRP
 {
-    
+    // No encontré algo que no cumpliera con SRP o expert ya que no hay más de una razón de cambio para Libro y además las responsabilidades están bien distribuidas
     class Program
     {
         static void Main(string[] args)
