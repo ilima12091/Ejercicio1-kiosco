@@ -4,9 +4,8 @@ namespace PII_Game_Of_Life
 {
     public class Logica
     {
-        public static bool[,] ProximaGeneracion()
+        public static bool[,] ProximaGeneracion(bool[,] gameBoard)
         {
-            bool[,] gameBoard = Archivo.LeerArchivo("./juego.txt");
             int boardWidth = gameBoard.GetLength(0);
             int boardHeight = gameBoard.GetLength(1);
 
@@ -54,7 +53,7 @@ namespace PII_Game_Of_Life
             }
             gameBoard = cloneboard;
             cloneboard = new bool[boardWidth, boardHeight];
-            return cloneboard;
+            return gameBoard;
         }
     }
 }

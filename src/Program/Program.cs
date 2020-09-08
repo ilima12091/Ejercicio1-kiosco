@@ -8,14 +8,14 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            bool[,] b = Logica.ProximaGeneracion(); //variable que representa el tablero
+            bool[,] b = Archivo.LeerArchivo("./juego.txt"); //variable que representa el tablero
             int width = b.GetLength(0); //variabe que representa el ancho del tablero
             int height = b.GetLength(1); //variabe que representa altura del tablero
             while (true)
             {
                 Console.Clear();
                 StringBuilder s = new StringBuilder();
-                for (int y = 0; y<height;y++)
+                for (int y = 0; y < height; y++)
                 {
                     for (int x = 0; x<width; x++)
                     {
@@ -31,9 +31,7 @@ namespace PII_Game_Of_Life
                     s.Append("\n");
                 }
                 Console.WriteLine(s.ToString());
-                //=================================================
-                //Invocar método para calcular siguiente generación
-                //=================================================
+                b = Logica.ProximaGeneracion(b);
                 Thread.Sleep(300);
             }
         }
